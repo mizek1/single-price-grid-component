@@ -1,0 +1,159 @@
+:root {
+  --cyan: hsl(179, 62%, 43%);
+  --cyan-lighter: hsl(179, 47%, 52%);
+  --bright-yellow: hsl(71, 73%, 54%);
+  --light-gray: hsl(204, 43%, 93%);
+  --grayish-blue: hsl(218, 22%, 67%);
+}
+
+body {
+  font-family: "Karla";
+  font-size: 16px;
+  background-color: var(--light-gray);
+  height: 90vh;
+}
+
+.wrapper {
+  display: grid;
+  place-items: center;
+  height: 100%;
+}
+
+.card {
+  width: 340px;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 0.3em;
+  box-shadow: 0px 0px 12px 5px rgba(0, 0, 0, 0.05);
+}
+
+.section-1 {
+  padding: 1.6em;
+}
+
+.section-1__title {
+  font-size: 1.2em;
+  font-weight: 700;
+  color: var(--cyan);
+  margin-bottom: 1.2em;
+}
+
+.section-1__subtitle {
+  font-size: 1em;
+  font-weight: 700;
+  color: var(--bright-yellow);
+  margin-bottom: 1.2em;
+}
+
+.section-1__text {
+  font-size: 0.9em;
+  line-height: 1.7em;
+  color: var(--grayish-blue);
+}
+
+.section-2 {
+  background-color: var(--cyan);
+  color: hsl(0, 0%, 100%);
+  padding: 1.6em;
+}
+
+.section-2__title {
+  font-size: 1.1em;
+  font-weight: 700;
+  margin-bottom: 1em;
+}
+
+.section-2__price {
+  display: flex;
+  align-items: center;
+}
+
+.section-2__value {
+  font-size: 1.8em;
+  font-weight: 700;
+}
+
+.section-2__frequency {
+  margin-left: 0.7em;
+  color: var(--light-gray);
+}
+
+.section-2__subtitle {
+  font-size: 0.9;
+  margin-top: 0.5em;
+}
+
+.section-2__sign-up-button {
+  margin-top: 1.5em;
+  padding: 0.9em 0;
+  text-align: center;
+  font-weight: 700;
+  border-radius: 0.3em;
+  background-color: var(--bright-yellow);
+  box-shadow: 0px 0px 12px 5px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+.section-3 {
+  padding: 1.6em;
+  background-color: var(--cyan-lighter);
+  border-radius: 0 0 0.3em 0.3em;
+  color: hsl(0, 0%, 100%);
+}
+
+.section-3__title {
+  font-size: 1.1em;
+  font-weight: 700;
+}
+
+.section-3__list {
+  list-style: none;
+  font-size: 0.9em;
+  line-height: 1.5em;
+  padding-left: 0;
+  margin-bottom: -0.5em;
+  color: var(--light-gray);
+}
+
+@media (min-width: 900px) {
+  .card {
+    width: 650px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .section-1 {
+    font-size: 1.1em;
+  }
+
+  .section-2 {
+    flex: 1;
+    border-bottom-left-radius: 0.3em;
+  }
+
+  .section-3 {
+    flex: 1;
+    border-bottom-left-radius: 0;
+  }
+
+  .section-1, .section-2, .section-3 {
+    padding: 2.5em;
+  }
+}
+
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
